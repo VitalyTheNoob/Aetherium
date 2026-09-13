@@ -1,1 +1,17 @@
 
+local DEAGLE_PLACE = 93377485784638
+local JJS_PLACE = 9391468976
+
+local DEAGLE_URL = "https://raw.githubusercontent.com/VitalyTheNoob/Aetherium/refs/heads/main/Loader/Deagle%20Duels%20/main.lua"
+local JJS_URL = "https://raw.githubusercontent.com/VitalyTheNoob/Aetherium/refs/heads/main/Loader/JJS/main.lua"
+
+if game.PlaceId == DEAGLE_PLACE then
+    loadstring(game:HttpGet(DEAGLE_URL))()
+elseif game.PlaceId == JJS_PLACE then
+    loadstring(game:HttpGet(JJS_URL))()
+else
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Aetherium",
+        Text = "This game isn't supported.",
+    })
+end
